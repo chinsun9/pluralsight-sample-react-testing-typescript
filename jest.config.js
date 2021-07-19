@@ -14,7 +14,10 @@ module.exports = {
     setupFilesAfterEnv: [
       '@testing-library/jest-dom/extend-expect'
     ],
-  
+
+    // The error below may be caused by using the wrong test environment, see https://jestjs.io/docs/configuration#testenvironment-string. Consider using the "jsdom" test environment.
+    testEnvironment :"jsdom",
+
     // Test spec file resolution pattern
     // Matches parent folder `__tests__` and filename
     // should contain `test` or `spec`.
